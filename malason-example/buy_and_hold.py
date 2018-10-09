@@ -35,6 +35,10 @@ def initialize(context):
 
 
 def handle_data(context, data):
+    current = data.current(symbol('AAPL'),
+                           fields=['open', 'close', 'high', 'low', 'volume', 'last_traded', 'price'])
+    print(current)
+
     if not context.has_ordered:
         for stock in context.stocks:
             order(symbol(stock), 100)

@@ -38,7 +38,7 @@ engine = SimplePipelineEngine(
 # the pipe get all symbols close price
 pipe = Pipeline(
     columns={
-        'price': USEquityPricing.close.latest,
+        'price':  USEquityPricing.close.latest,
     }
 )
 
